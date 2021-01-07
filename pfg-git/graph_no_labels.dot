@@ -1,0 +1,18 @@
+digraph {
+eventsources -> inboundprocessing;
+eventsources;
+inboundprocessing -> eventmanagement;
+inboundprocessing -> eventmanagement;
+eventsources -> eventmanagement;
+eventsources -> deviceregistration;
+inboundprocessing -> eventmanagement;
+inboundprocessing -> deviceregistration;
+inboundprocessing -> eventmanagement;
+inboundprocessing -> deviceregistration;
+eventmanagement;
+eventmanagement;
+commanddelivery -> eventmanagement;
+batchoperations -> batchoperations;
+batchoperations -> batchoperations;
+batchoperations;
+}

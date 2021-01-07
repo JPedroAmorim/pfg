@@ -1,0 +1,18 @@
+digraph {
+eventsources -> inboundprocessing[label="event-source-decoded-events"];
+eventsources;
+inboundprocessing -> eventmanagement[label="inbound-events"];
+inboundprocessing -> eventmanagement[label="inbound-reprocess-events"];
+eventsources -> eventmanagement[label="inbound-device-registration-events"];
+eventsources -> deviceregistration[label="inbound-device-registration-events"];
+inboundprocessing -> eventmanagement[label="inbound-device-registration-events"];
+inboundprocessing -> deviceregistration[label="inbound-device-registration-events"];
+inboundprocessing -> eventmanagement[label="inbound-unregistered-device-events"];
+inboundprocessing -> deviceregistration[label="inbound-unregistered-device-events"];
+eventmanagement;
+eventmanagement;
+commanddelivery -> eventmanagement[label="outbound-command-invocations"];
+batchoperations -> batchoperations[label="unprocessed-batch-operations"];
+batchoperations -> batchoperations[label="unprocessed-batch-elements"];
+batchoperations;
+}
